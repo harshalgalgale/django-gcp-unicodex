@@ -21,3 +21,8 @@ crash.logs
 
 # ignore .env 
 .env
+.env.prod
+
+data/
+.idea
+.venv

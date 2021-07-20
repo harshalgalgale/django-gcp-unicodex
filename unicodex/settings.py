@@ -57,7 +57,7 @@ else:
     # Assume localhost if no CURRENT_HOST
     HOSTS = ["localhost"]
 
-ALLOWED_HOSTS = ["127.0.0.1"] + HOSTS
+ALLOWED_HOSTS = ["127.0.0.1", "0.0.0.0"] + HOSTS
 
 # Enable Django security precautions if *not* running locally
 if "localhost" not in ALLOWED_HOSTS:
@@ -83,6 +83,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "unicodex",
+    "core",
+    "students",
 ]
 
 MIDDLEWARE = [
@@ -111,6 +113,11 @@ else:
 
     MEDIA_ROOT = "media/"  # where files are stored on the local filesystem
     MEDIA_URL = "/media/"  # what is prepended to the image URL
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 ROOT_URLCONF = "unicodex.urls"

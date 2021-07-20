@@ -1,6 +1,8 @@
-Django==3.1.12
+Django
 gunicorn
 django-environ
+djangorestframework
+django-import-export
 psycopg2-binary
 django-storages[google]
 google-cloud-secret-manager==2.0.0
