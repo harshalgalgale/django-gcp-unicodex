@@ -115,9 +115,9 @@ else:
     MEDIA_URL = "/media/"  # what is prepended to the image URL
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 
 ROOT_URLCONF = "unicodex.urls"
